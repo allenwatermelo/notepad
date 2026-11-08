@@ -1,11 +1,9 @@
-const CACHE = 'little-bloom-v1'
-const CORE = ['/', '/index.html', '/manifest.webmanifest', '/apple-touch-icon.png', '/icon-192.png', '/icon-512.png']
-self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE))))
-self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))))
-self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET' || new URL(event.request.url).origin !== self.location.origin) return
-  event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
-    if (response.ok) caches.open(CACHE).then(cache => cache.put(event.request, response.clone()))
-    return response
-  }).catch(() => caches.match('/index.html'))))
-})
+// Retire the old offline cache. It can serve a cached page without Vercel's
+// authentication gate, while its uncached JavaScript assets are redirected
+// to Vercel's sign-in service and fail as cross-origin module requests.
+self.addEventListener('install', event => event.waitUntil(self.skipWaiting()))
+self.addEventListener('activate', event => event.waitUntil((async () => {
+  const oldCaches = await caches.keys()
+  await Promise.all(oldCaches.filter(name => name.startsWith('little-bloom-')).map(name => caches.delete(name)))
+  await self.registration.unregister()
+})()))
