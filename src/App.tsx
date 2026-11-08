@@ -82,7 +82,7 @@ export default function App() {
   const navItems: { name: View; icon: typeof Home }[] = [{ name: 'Home', icon: Home }, { name: 'Notes', icon: NotebookPen }, { name: 'Tasks', icon: CheckSquare }, { name: 'Calendar', icon: CalendarDays }, { name: 'More', icon: MoreHorizontal }]
 
   return <div className="app-shell" data-theme={data.theme}>
-    <header className="topbar"><a className="brand" href="#home" onClick={event => { event.preventDefault(); setView('Home') }}><span className="brand-mark"><Flower2 size={19} /></span><span>little bloom<small>your personal notebook</small></span></a><button className="icon-button search-toggle" aria-label="Search" onClick={() => document.getElementById('global-search')?.focus()}><Search size={19} /></button></header>
+    <header className="topbar"><a className="brand" href="#home" onClick={event => { event.preventDefault(); setView('Home') }}><span className="brand-mark"><img src="/icon-192.svg" alt="" /></span><span>little bloom<small>your personal notebook</small></span></a><button className="icon-button search-toggle" aria-label="Search" onClick={() => document.getElementById('global-search')?.focus()}><Search size={19} /></button></header>
     <main className="main-content">
       <div className="search-wrap"><Search size={16} /><input id="global-search" placeholder="Search your little world..." value={query} onChange={event => setQuery(event.target.value)} /><kbd>⌘ K</kbd></div>
       {query && <><div className="search-hint">Searching your notes, tasks, and plans for “{query}”</div><section className="global-results">{[

@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192"><rect width="192" height="192" rx="48" fill="#f7dce5"/><path d="M96 145c-39-24-55-45-44-64 10-17 33-9 44 8 11-17 34-25 44-8 11 19-5 40-44 64Z" fill="#fff9f5"/><circle cx="96" cy="70" r="11" fill="#e9b9cb"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-labelledby="title">
+  <title id="title">Little Bloom flower logo</title>
+  <rect width="192" height="192" rx="48" fill="#f7dce5"/>
+  <path d="M96 112c0 17-3 28-3 39" fill="none" stroke="#789477" stroke-linecap="round" stroke-width="7"/>
+  <path d="M94 137c-20-19-34-17-38-14 3 19 17 28 39 20m1-4c17-19 31-18 37-15-3 19-16 29-38 22" fill="#a9c5a1" stroke="#789477" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <g fill="#fff9f5">
+    <ellipse cx="96" cy="50" rx="16" ry="24"/>
+    <ellipse cx="96" cy="50" rx="16" ry="24" transform="rotate(60 96 76)"/>
+    <ellipse cx="96" cy="50" rx="16" ry="24" transform="rotate(120 96 76)"/>
+    <ellipse cx="96" cy="50" rx="16" ry="24" transform="rotate(180 96 76)"/>
+    <ellipse cx="96" cy="50" rx="16" ry="24" transform="rotate(240 96 76)"/>
+    <ellipse cx="96" cy="50" rx="16" ry="24" transform="rotate(300 96 76)"/>
+  </g>
+  <circle cx="96" cy="76" r="22" fill="#f4ce83"/>
+  <circle cx="89" cy="74" r="2.3" fill="#705b5d"/>
+  <circle cx="103" cy="74" r="2.3" fill="#705b5d"/>
+  <path d="M90 82q6 7 12 0" fill="none" stroke="#705b5d" stroke-linecap="round" stroke-width="2.5"/>
+  <circle cx="84" cy="81" r="3" fill="#e8a6ac" opacity=".8"/>
+  <circle cx="108" cy="81" r="3" fill="#e8a6ac" opacity=".8"/>
+  <path d="m48 55 3 6 6 1-5 4 1 6-5-3-5 3 1-6-5-4 7-1z" fill="#fff9f5" opacity=".8"/>
+  <path d="m145 104 2 4 5 1-4 3 1 5-4-2-4 2 1-5-4-3 5-1z" fill="#fff9f5" opacity=".8"/>
+</svg>
